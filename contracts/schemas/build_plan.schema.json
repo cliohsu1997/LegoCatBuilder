@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BuildPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "build_plan_id",
+    "mode",
+    "placements"
+  ],
+  "properties": {
+    "build_plan_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "preview_mode",
+        "build_mode"
+      ]
+    },
+    "placements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "part_id",
+          "color",
+          "x",
+          "y",
+          "z",
+          "orientation",
+          "layer"
+        ],
+        "properties": {
+          "part_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "color": {
+            "type": "string"
+          },
+          "x": {
+            "type": "integer"
+          },
+          "y": {
+            "type": "integer"
+          },
+          "z": {
+            "type": "integer"
+          },
+          "orientation": {
+            "type": "string",
+            "enum": [
+              "x_aligned",
+              "y_aligned"
+            ]
+          },
+          "layer": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
+

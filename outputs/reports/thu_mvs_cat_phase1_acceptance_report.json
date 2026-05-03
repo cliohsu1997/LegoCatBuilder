@@ -1,0 +1,23 @@
+{
+  "photo_set_id": "thu_mvs_cat_selected_views",
+  "accepted": true,
+  "missing_views": [],
+  "per_view": [
+    {
+      "view_type": "front",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "view_type": "side",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "view_type": "top",
+      "passed": true,
+      "reasons": []
+    }
+  ],
+  "recommendations": []
+}

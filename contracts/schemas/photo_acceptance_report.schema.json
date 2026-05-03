@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PhotoAcceptanceReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "photo_set_id",
+    "accepted",
+    "missing_views",
+    "per_view",
+    "recommendations"
+  ],
+  "properties": {
+    "photo_set_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "accepted": {
+      "type": "boolean"
+    },
+    "missing_views": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "front",
+          "side",
+          "top"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "per_view": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "view_type",
+          "passed",
+          "reasons"
+        ],
+        "properties": {
+          "view_type": {
+            "type": "string",
+            "enum": [
+              "front",
+              "side",
+              "top"
+            ]
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

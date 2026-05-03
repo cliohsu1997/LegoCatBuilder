@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BrickInventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "inventory_id",
+    "parts"
+  ],
+  "properties": {
+    "inventory_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "part_id",
+          "name",
+          "size_x",
+          "size_y",
+          "size_z",
+          "color",
+          "quantity"
+        ],
+        "properties": {
+          "part_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string"
+          },
+          "size_x": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "size_y": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "size_z": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "color": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
+

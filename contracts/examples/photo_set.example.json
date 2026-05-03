@@ -1,0 +1,34 @@
+{
+  "photo_set_id": "cat_001",
+  "capture_notes": "Indoor light, neutral background.",
+  "views": [
+    {
+      "view_type": "front",
+      "path": "inputs/photos/cat_001/front.jpg",
+      "width": 2048,
+      "height": 1536,
+      "blur_score": 165.2,
+      "subject_coverage_ratio": 0.68,
+      "background_complexity": 0.32
+    },
+    {
+      "view_type": "side",
+      "path": "inputs/photos/cat_001/side.jpg",
+      "width": 2048,
+      "height": 1536,
+      "blur_score": 148.9,
+      "subject_coverage_ratio": 0.61,
+      "background_complexity": 0.40
+    },
+    {
+      "view_type": "top",
+      "path": "inputs/photos/cat_001/top.jpg",
+      "width": 1920,
+      "height": 1080,
+      "blur_score": 132.4,
+      "subject_coverage_ratio": 0.53,
+      "background_complexity": 0.45
+    }
+  ]
+}
+

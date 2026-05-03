@@ -1,0 +1,15 @@
+---
+description: Agent permissions for this project – web search and git read
+alwaysApply: true
+---
+
+# Agent Permissions
+
+When working on this project, you have permission to:
+
+1. **Search the internet** – Use web search when you need up-to-date information, docs, or external references. Prefer this when the codebase or training data is insufficient.
+
+2. **Read git** – Read git state as needed: `git status`, `git log`, `git diff`, `git remote -v`, branch names, and other read-only git commands to understand repo state and history.
+
+Use these when they help complete the user’s request. Do not perform destructive git operations (e.g. force push, hard reset) unless the user explicitly asks.
+

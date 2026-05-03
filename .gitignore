@@ -1,0 +1,18 @@
+# Large or regenerable pipeline outputs (re-run scripts to reproduce)
+artifacts/
+data/raw/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.python-version
+
+# OS / editor
+Thumbs.db
+.DS_Store
+*.swp
+*.swo

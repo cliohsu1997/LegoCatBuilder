@@ -1,0 +1,19 @@
+{
+  "colmap_bat": "C:\\Tools\\COLMAP\\COLMAP.bat",
+  "image_dir": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_full\\images",
+  "workspace_dir": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_full\\workspace",
+  "argv": [
+    "C:\\Tools\\COLMAP\\COLMAP.bat",
+    "automatic_reconstructor",
+    "--workspace_path",
+    "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_full\\workspace",
+    "--image_path",
+    "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_full\\images",
+    "--quality",
+    "medium",
+    "--gpu",
+    "0"
+  ],
+  "elapsed_s": 73.08873248100281,
+  "log_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_full\\workspace\\logs\\colmap_automatic_reconstructor.log"
+}

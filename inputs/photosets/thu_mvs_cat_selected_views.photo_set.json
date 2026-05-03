@@ -1,0 +1,33 @@
+{
+  "photo_set_id": "thu_mvs_cat_selected_views",
+  "capture_notes": "THU-MVS cat figurine dataset subset. Three required views selected from the same sequence.",
+  "views": [
+    {
+      "view_type": "front",
+      "path": "data/raw/cat_views/thu_mvs_cat/selected_views/front.png",
+      "width": 1280,
+      "height": 1024,
+      "blur_score": 248.22714233398438,
+      "subject_coverage_ratio": 0.9197380065917968,
+      "background_complexity": 0.02210732372190722
+    },
+    {
+      "view_type": "side",
+      "path": "data/raw/cat_views/thu_mvs_cat/selected_views/side.png",
+      "width": 1280,
+      "height": 1024,
+      "blur_score": 205.9990234375,
+      "subject_coverage_ratio": 0.9191215515136719,
+      "background_complexity": 0.021751416285229485
+    },
+    {
+      "view_type": "top",
+      "path": "data/raw/cat_views/thu_mvs_cat/selected_views/top.png",
+      "width": 1280,
+      "height": 1024,
+      "blur_score": 249.7802734375,
+      "subject_coverage_ratio": 0.8559944152832031,
+      "background_complexity": 0.027352720395214157
+    }
+  ]
+}

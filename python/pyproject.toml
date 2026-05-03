@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "lego-cat-builder-python"
+version = "0.1.0"
+description = "Python utilities for LEGO Cat Builder pipeline."
+authors = ["LegoCatBuilder"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = ">=2.0,<2.4"
+pillow = "^12.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"

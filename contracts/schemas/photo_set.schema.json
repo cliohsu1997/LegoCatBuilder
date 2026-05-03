@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PhotoSet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "photo_set_id",
+    "views",
+    "capture_notes"
+  ],
+  "properties": {
+    "photo_set_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capture_notes": {
+      "type": "string"
+    },
+    "views": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "view_type",
+          "path",
+          "width",
+          "height",
+          "blur_score",
+          "subject_coverage_ratio",
+          "background_complexity"
+        ],
+        "properties": {
+          "view_type": {
+            "type": "string",
+            "enum": [
+              "front",
+              "side",
+              "top"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "blur_score": {
+            "type": "number",
+            "minimum": 0
+          },
+          "subject_coverage_ratio": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "background_complexity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  }
+}
+

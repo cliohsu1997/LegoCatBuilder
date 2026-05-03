@@ -1,0 +1,42 @@
+{
+  "inventory_id": "starter_inventory_a",
+  "parts": [
+    {
+      "part_id": "3001",
+      "name": "Brick 2x4",
+      "size_x": 2,
+      "size_y": 4,
+      "size_z": 1,
+      "color": "Black",
+      "quantity": 120
+    },
+    {
+      "part_id": "3003",
+      "name": "Brick 2x2",
+      "size_x": 2,
+      "size_y": 2,
+      "size_z": 1,
+      "color": "Dark Bluish Gray",
+      "quantity": 180
+    },
+    {
+      "part_id": "3004",
+      "name": "Brick 1x2",
+      "size_x": 1,
+      "size_y": 2,
+      "size_z": 1,
+      "color": "Tan",
+      "quantity": 220
+    },
+    {
+      "part_id": "3005",
+      "name": "Brick 1x1",
+      "size_x": 1,
+      "size_y": 1,
+      "size_z": 1,
+      "color": "White",
+      "quantity": 280
+    }
+  ]
+}
+

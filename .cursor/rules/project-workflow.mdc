@@ -1,0 +1,85 @@
+---
+description: Core project context and workflow for this repository (applies in any workspace that contains this .cursor folder)
+alwaysApply: true
+---
+
+# Cursor Rules — This Repository
+
+**Scope:** These rules apply to **this workspace** (the folder that contains `.cursor/rules/`). They are not global to your machine. To reuse the same workflow in another repo, copy `.cursor/` (or this rule + skills) into that project, or add equivalent instructions under **Cursor → Settings → Rules → User rules** for all projects.
+
+## Important: Read Project Context First
+
+At the start of **every** new conversation, you MUST read these in order:
+
+1. **`.cursor/skills/task-management-workflow/SKILL.md`** — Task proposals, to-do lists, task summaries, progress updates, and naming conventions. **Read this file in full every time** (not only when the user mentions tasks).
+2. **`IMPLEMENTATION_PLAN.md`** — Single source of truth for high-level phases and status
+3. **`structure/latest.md`** — Current project structure and file organization
+4. **`progress/latest.md`** — Active tasks and completion status
+5. **`task_summary/YYYYMM/YYYYMMDD/[most_recent].md`** — Most recent task summary (when continuing work)
+
+**`README.md`** (repo root) — Short project overview and pointers; optional if this rule is already loaded.
+
+These files contain essential information about the project setup, workflow, and coding standards that should be followed throughout all conversations.
+
+---
+
+## Overview
+
+This project uses a structured workflow to track tasks and proposals systematically. For task-specific procedures, follow **task-management-workflow** (see step 1 above). Other guidance lives in `.cursor/skills/`.
+
+## Project Execution Policy
+
+- `IMPLEMENTATION_PLAN.md` is the authoritative high-level phase plan.
+- Any new phase/subphase or phase status change must be updated in `IMPLEMENTATION_PLAN.md` first, then synchronized to task/progress docs.
+- Agent may create/modify/download files without per-file confirmation when file size is **<= 200 MB**.
+- For files expected to be **> 200 MB**, agent must inform the user before proceeding.
+- After each completed subtask, update `conversation_cursor`, `to-do`, `task_summary`, `structure/latest.md`, and `progress/latest.md`.
+
+## Folder Organization
+
+```
+conversation_cursor/     [TASK PROPOSALS]
+├── YYYYMM/
+│   └── YYYYMMDD/
+│       └── task_name.md
+
+to-do/                   [TASK CHECKLISTS]
+├── YYYYMM/
+│   └── YYYYMMDD/
+│       └── task_name.md
+
+task_summary/            [TASK SUMMARIES]
+├── YYYYMM/
+│   └── YYYYMMDD/
+│       └── task_name.md
+
+progress/                [PROGRESS TRACKING]
+└── latest.md            → Active & completed tasks
+
+structure/               [PROJECT DOCUMENTATION]
+└── latest.md            → Project structure & file descriptions
+
+IMPLEMENTATION_PLAN.md   [SINGLE SOURCE OF TRUTH]
+                        → High-level project phases and status
+```
+
+## Cursor Skills
+
+Skills are in `.cursor/skills/`. **task-management-workflow** is mandatory reading each conversation (see above). Others are used when relevant:
+
+- **task-management-workflow** — Task file management, updates, completion (always read at conversation start)
+- **file-creation-rules** — File creation permissions and naming conventions
+- **r-package-development** — R environment, package loading, script execution
+- **hpc4-execution** — HPC4 conda environment, AWS config, SLURM jobs
+- **aws-s3-data-management** — S3 credentials, load/write operations
+- **coding-style** — R and C++ code formatting standards
+- **git-rules** — Git workflow and commit message format
+
+See `.cursor/skills/` for the full list.
+
+## Remote Repositories
+
+| Repository | Remote Name | Purpose | Stores |
+|------------|-------------|---------|--------|
+| **GitHub** | `origin` | Main code repository | All project files |
+
