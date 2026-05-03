@@ -16,7 +16,7 @@ All phase references in `conversation_cursor/`, `to-do/`, `task_summary/`, `prog
 - Define schemas and example contracts for `photo_set`, `brick_inventory`, and `build_plan`.
 - Establish baseline folder conventions for inputs, artifacts, and outputs.
 
-### Phase 1 - Photo Acceptability Gate (in progress)
+### Phase 1 - Photo Acceptability Gate (completed)
 - Require `front`, `side`, and `top` views.
 - Validate each required view against quality thresholds:
   - resolution,
@@ -25,7 +25,7 @@ All phase references in `conversation_cursor/`, `to-do/`, `task_summary/`, `prog
   - background complexity.
 - Emit deterministic pass/fail outputs with actionable recapture recommendations.
 
-### Phase 2 - Multi-View 3D Reconstruction (pending)
+### Phase 2 - Multi-View 3D Reconstruction (in progress)
 - Run COLMAP-based feature extraction, matching, sparse reconstruction, and dense reconstruction.
 - Save reconstruction quality metrics and normalize mesh orientation/scale for downstream LEGO steps.
 
@@ -51,4 +51,4 @@ All phase references in `conversation_cursor/`, `to-do/`, `task_summary/`, `prog
 
 ## Current Focus
 
-- Finish Phase 1 validator implementation and produce a report for the imported `thu_mvs_cat` dataset.
+- Drive Phase 2 reconstruction from accepted Phase 1 reports and improve reconstruction completeness (sparse to dense) with richer multi-view inputs.

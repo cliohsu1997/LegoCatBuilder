@@ -1,0 +1,42 @@
+{
+  "photo_set_id": "thu_mvs_cat_selected_views",
+  "phase1_accepted": true,
+  "staged_image_count": 3,
+  "staged_views": [
+    {
+      "view_type": "front",
+      "source_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\data\\raw\\cat_views\\thu_mvs_cat\\selected_views\\front.png",
+      "staged_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\images\\00_front.png"
+    },
+    {
+      "view_type": "side",
+      "source_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\data\\raw\\cat_views\\thu_mvs_cat\\selected_views\\side.png",
+      "staged_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\images\\01_side.png"
+    },
+    {
+      "view_type": "top",
+      "source_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\data\\raw\\cat_views\\thu_mvs_cat\\selected_views\\top.png",
+      "staged_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\images\\02_top.png"
+    }
+  ],
+  "colmap_bat": "C:\\Tools\\COLMAP\\COLMAP.bat",
+  "workspace_dir": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2",
+  "image_dir": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\images",
+  "colmap_workspace_dir": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\workspace",
+  "argv": [
+    "C:\\Tools\\COLMAP\\COLMAP.bat",
+    "automatic_reconstructor",
+    "--workspace_path",
+    "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\workspace",
+    "--image_path",
+    "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\images",
+    "--quality",
+    "medium",
+    "--gpu",
+    "0"
+  ],
+  "elapsed_s": 2.7399117946624756,
+  "log_path": "C:\\Users\\birdy\\Desktop\\LegoCatBuilder\\artifacts\\reconstruction\\thu_mvs_cat_phase2\\workspace\\logs\\colmap_automatic_reconstructor.log",
+  "sparse_exists": true,
+  "dense_exists": false
+}

@@ -8,8 +8,9 @@ Implement a practical, reproducible 3D pipeline that converts `front + side + to
 
 ## Current Phase Status
 - Completed: **Phase 0 (Project foundation and data contracts)**.
-- Current: **Phase 1 (Photo acceptability gate)**.
-- Next: **Phase 2 (COLMAP reconstruction)** once Phase 1 checks pass.
+- Completed: **Phase 1 (Photo acceptability gate)**.
+- Current: **Phase 2 (COLMAP reconstruction + visualization helpers)**.
+- Next: **Phase 3 (Voxelization)** once reconstruction quality gates are satisfied.
 - Phase source of truth: `IMPLEMENTATION_PLAN.md` (root).
 
 ## Workflow Governance Decisions (new)
@@ -105,7 +106,8 @@ These are references for implementation strategy, not direct dependencies yet.
 - Tune thresholds and objective weights based on results.
 
 ## Immediate Next Implementation Tasks
-1. Implement phase-1 validator script and report schema.
-2. Add one accepted and one rejected sample case for phase-1 tests.
-3. Wire phase-1 output format to phase-2 COLMAP runner input.
+1. Increase accepted input view count from 3 canonical views to a denser subset for improved Phase 2 completeness.
+2. Add mesh export plus coordinate normalization (`z` up, base at `z=0`, LEGO-unit scale).
+3. Preserve reconstruction quality diagnostics (registered images, sparse points, dense artifacts) in summary contracts.
+4. Use `python/code/visualize_reconstruction.py` to launch COLMAP GUI and export local PLY previews when sparse model files are available.
 

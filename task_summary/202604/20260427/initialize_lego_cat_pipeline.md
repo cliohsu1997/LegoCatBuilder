@@ -27,17 +27,32 @@ Initialize the project workflow scaffold and define the first technical directio
   - autonomous file operations up to 200 MB,
   - mandatory synchronization updates after completed subtasks,
   - root-plan-first phase change policy.
+- Implemented Phase 1 validator script with deterministic required-view and quality checks:
+  - `python/code/phase1_validate_photo_set.py`
+- Generated accepted Phase 1 report:
+  - `outputs/reports/thu_mvs_cat_phase1_acceptance_report.json`
+- Implemented Phase 2 orchestration from accepted photo sets:
+  - `python/code/phase2_reconstruct_from_photo_set.py`
+- Ran Phase 2 reconstruction with installed COLMAP and generated summary:
+  - `outputs/reports/thu_mvs_cat_phase2_reconstruction_summary.json`
+  - `artifacts/reconstruction/thu_mvs_cat_phase2/`
+- Added visualization helper script for local inspection:
+  - `python/code/visualize_reconstruction.py`
+  - supports launching COLMAP GUI and exporting/opening sparse PLY previews when model files exist.
+- Verified visualization end-to-end with user confirmation:
+  - COLMAP GUI successfully imported and displayed cat sparse model from `artifacts/reconstruction/thu_mvs_cat_full/workspace/sparse/0/`.
 
 ## Current Status
-Project has validated multi-view input data for Phase 1 and now has a root-authoritative phase plan with synchronized workflow governance.
+Phase 1 is complete for `thu_mvs_cat_selected_views`, and Phase 2 is now in progress with a reproducible COLMAP run path from accepted inputs.
 
 ## Phase Tracking Snapshot
 - Completed: Phase 0 (data contracts and folder conventions).
-- In progress: Phase 1 (photo acceptability gate definition and implementation).
-- Pending: Phases 2-7 (reconstruction, voxelization, decomposition, stability, instructions, benchmarking).
+- Completed: Phase 1 (photo acceptability gate definition and implementation).
+- In progress: Phase 2 (COLMAP reconstruction pipeline integration and diagnostics).
+- Pending: Phases 3-7 (voxelization, decomposition, stability, instructions, benchmarking) and remaining Phase 2 quality upgrades.
 
 ## Next Actions
-- Implement the Phase 1 validator and deterministic pass/fail report output.
-- Run validator on the imported `thu_mvs_cat` selected views.
-- Connect accepted photo set output into Phase 2 COLMAP runner input contract.
+- Increase view count to improve dense reconstruction success (current 3-view run yields sparse artifacts only).
+- Add mesh export and coordinate normalization to LEGO frame.
+- Define Phase 2 quality metrics contract fields for downstream voxelization gates.
 

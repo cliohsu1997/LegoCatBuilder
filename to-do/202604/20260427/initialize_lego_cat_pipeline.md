@@ -3,10 +3,10 @@
 ## Phase 1 - Acceptability gate
 - [x] Acquire a same-subject multi-view cat dataset with at least `front`, `side`, `top` views.
 - [x] Record data source and verification notes for selected views.
-- [ ] Implement required view completeness check (`front`, `side`, `top`).
-- [ ] Implement resolution, blur, subject-coverage, and background-complexity checks.
-- [ ] Emit pass/fail report with recapture suggestions.
-- [ ] Run Phase 1 validator on `thu_mvs_cat` selected views and save the report under `outputs/reports/`.
+- [x] Implement required view completeness check (`front`, `side`, `top`).
+- [x] Implement resolution, blur, subject-coverage, and background-complexity checks.
+- [x] Emit pass/fail report with recapture suggestions.
+- [x] Run Phase 1 validator on `thu_mvs_cat` selected views and save the report under `outputs/reports/`.
 
 ## Workflow and governance
 - [x] Create root `IMPLEMENTATION_PLAN.md` as single source of truth for project phases.
@@ -14,9 +14,11 @@
 - [ ] Keep phase names and statuses synchronized across task files, `progress/latest.md`, and `structure/latest.md` after every completed subtask.
 
 ## Phase 2 - Reconstruction
-- [ ] Implement COLMAP runner integration for accepted photo sets.
-- [ ] Export sparse/dense reconstruction metrics for reporting.
+- [x] Implement COLMAP runner integration for accepted photo sets.
+- [x] Export sparse/dense reconstruction metrics for reporting.
+- [x] Add helper script to launch COLMAP GUI and export sparse PLY previews.
 - [ ] Normalize mesh orientation and scale to LEGO coordinates.
+- [ ] Increase input view count beyond 3 views to improve dense reconstruction success.
 
 ## Phase 3-4 - Voxel and decomposition
 - [ ] Implement coarse and fine voxelization modes.
